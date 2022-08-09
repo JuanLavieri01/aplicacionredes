@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8"/>
+        <title>Ejercicio 1</title>
+        <style>
+            .links{
+                display: flex;
+                
+            }
+            .linkp{
+                margin-right: 10px;
+            }
+        </style>
+    </head>
         <body>
-            <h2>pepe</h2>
+            <h1>Primer parrafo de pruebra (H1)</h1>
+            <h2>Segundo parrafo de prueba(H2)</h2>
+            <h3>Lista de navegacion</h3>
+
             <ul>
-                <li><a></a></li>
+                <li><a href="https://www.google.com/">Google</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Wikipedia:Portada">Wikipedia</a></li>
+                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Youtube</a></li>
 
             </ul>
+            <hr>
+            <div class="links">
+                <p class="linkp"><a href="Otra pagina/index.html">Enlace a otra pagina dentro de la misma pestaña</a></p>
+                <p class="linkp"><a href="Otra_pagina_en_otra_pestaña/index.html" target="_blank">Enlace a una pagina en otra pestaña</a></p>
+                <a name="Ancla a otro punto de esta pagina"></a>
+                <p class="linkp"><a href="#Punto de anclaje">Ancla a otro punto de esta pagina</a></p>
+            </div>
+
+            <hr>
+
+            <h1>Preguntas sobre HTTP</h1>
+
+            <ol>
+                <li>¿Sobre qué protocolo binario está montado el protocolo HTTP?</li>
+                <p>R= Se transmite sobre el protocolo tcp.</p>
+                <li>Cuáles son los clientes http y los servidores http mas utilizados?</li>
+                <p>R= El servidor web Apache, oficialmente conocido como Apache HTTP Server, Nginx y OpenResty.</p>
+                <li>¿Que verbos admite un comando en el requerimiento HTTP?</li>
+                <p>R= Los métodos pueden ser utilizados como verbos para la manipulación de recursos remotos en servicios web:
+
+                    <ul>
+                        <li>GET: Solo lectura</li>
+                        <li>PUT: Utilizado para crear recursos en un servidor</li>
+                        <li>DELETE: Utilizado para borrar recursos en un servidor</li>
+                        <li>POST: Utilizado normalmente para actualizar recursos en un servidor</li>
+                    </ul>
+                </p>
+                <li>¿Que contenido lleva el body de un requerimiento HTTP?</li>
+                <p>Puede llevar texto, files o flujo de datos. Los files deben tener un header asociado que indique el tipo y otro que indique el tamaño. Los datos transferidos pueden ser de tipo texto para el control en el navegador o de tipo binario para las muestras de video. O en clase se dijo que van los datos de un formulario, dependiendo del verbo </p>
+                <li>¿Que diferencia existe entre un URL y un URI?</li>
+                <p>R= El URI (Uniform Resource Identifier) identifica un recurso por su nombre, por su ubicación o por ambos.</p>
+                <p>URL (Uniform Resource Locator) está formada por un conjunto de caracteres, que sigue un estándar, y que especifica que un determinado recurso digital está identificado y disponible y permite localizarlo.</p>
+                <p>La correcion en clase fue que: URL es todo, ubicaciobn del recurso en la red, nombre del host y lo que sigue es el "URI"</p>
+                <li>¿En que variables quedan almacenados datos de las respuestas http?</li>
+                <p>R= Quedan almacenados en la cache</p>
+                <li>¿Que significa Virtual hosting?</li>
+                <p>R= El virtualhost, o servidor virtual, es una forma de alojamiento web que permite que varias dominios puedan funcionar en una misma ip.</p>
+                <li>¿Porque el HTTP se considera STATE LESS?</li>
+                <p>R= Ya que un protocolo sin estado (stateless protocol) es un protocolo de comunicaciones que trata cada petición como una transacción independiente que no tiene relación con cualquier solicitud anterior, de modo que la comunicación se compone de pares independientes de solicitud y respuesta. En clases se concluyo que es por la informacion que queda guardada en memoria es incapaz de mantener el estado</p>
+                <li>¿Como va a mejorar la velocidad de la WEB en poco tiempo?</li>
+                <p>Lo que está funcionando en algunos sitios y navegadores desde 2015 es HTTP/2HTTP/3 vendrá montado totalmente sobre QUIC y no sobre TCP.</p>
+                <p>De las principales características que incluye el Http/2 que mejoran al Http/1.1 son:
+                    <ul>
+                        <li>Multiplexedstreams (requerimientos multiplexados).</li>
+                        <li>Serverpush (entregas multiplexadas).</li>
+                        <li>Compresión de HEADERS en formato binario</li>
+                    </ul>
+                </p>
+                <li>Como va a mejorar el comportamiento de una aplicación WEB en ambientes ruidosos o de débil conexión?</li>
+                <p>HTTP/3 mejora al http/2 en velocidad de establecimiento de conexión y en mayor capacidad de recuperación y velocidad en casos de estar en zonas con mucho ruido y en consecuencia de poca confiabilidad en los medios.</p>
+                <p>Este se basa en “QUIC” realiza las funciones que hacía TCP y que no hace UDP. Además, lo hace de forma más eficiente, consiguiendo datos fiables, seguros y a mayor velocidad. QUIC, en un principio, se va a utilizar solo con el protocolo de aplicación HTTP/3, pero es probable que en el futuro otros protocolos de aplicación se apoyen en QUIC. Con HTTP/3 y QUIC, va a suponer una mejora sobre todo en situaciones en las que se produzcan errores en la transmisión, como en conexiones débiles o inestables, algo muy importante, teniendo en cuenta que el móvil es el medio preferido de navegación de los usuarios y que no siempre se dan las mejores condiciones de cobertura. En ambientes con mucho ruido electromagnético, las conexiones largas producen gran cantidad de paquetes repetidos por falta de confirmación por parte de los receptores, esto se traduce en grandes retardos en la transmisión de datos. QUIC produce conexiones UDP mucho más cortas, eficientes y de fácil establecimiento, ideales para la transmisión de las partes constitutivas de un documento HTML.</p>
+
+            </ol>
+            <h2>Anclaje</h2>
+            <a name="Punto de anclaje"></a>
+            <h3><a href="#Ancla a otro punto de esta pagina">Punto de anclaje</a></h3>
+            <h2>Seccion de imagen</h2>
+            <img src="img/Ranaconsombrero.jpg" width="500px" height="500px" alt="Rana">
+            <img src="img/Ranaconsombrero.jpg" width="300px" height="300px" alt="Rana">
+            <img src="img/Ranaconsombrero.jpg" width="100px" height="100px" alt="Rana">
+            <h2>Seccion video</h2>
+            <video src="img/Still my favourite video to this day .mp4" controls alt="Hamster"></video>
+            
+            <h2>Datos del alumno</h2>
+            <h3>Estudiante: Juan Lavieri</h3>
+            <h3>juan.lavieri@comunidad.ub.edu.ar</h3>
+            <hr>
+            <h3><a href="../index.html">Volver</a></h3>
+            <hr>
         </body>
-    </head>
+    
 </html>
